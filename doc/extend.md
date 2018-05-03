@@ -25,7 +25,9 @@ not everything fits with everyone's needs.
 ### Smart App Banners in iOS 6+ Safari
 
 Stop bothering everyone with gross modals advertising your entry in the
-App Store. Including the following [meta tag](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html) will unobtrusively give the user the option to download your iOS app,or open it with some data about the user's current state on the website.
+App Store. Include the following [meta tag](https://developer.apple.com/library/IOS/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html#//apple_ref/doc/uid/TP40002051-CH6-SW2)
+will unintrusively allow the user the option to download your iOS app,
+or open it with some data about the user's current state on the website.
 
 ```html
 <meta name="apple-itunes-app" content="app-id=APP_ID,app-argument=SOME_TEXT">
@@ -214,6 +216,28 @@ $(function(){
 ```
 
 ## Internet Explorer
+
+### Prompt users to switch to "Desktop Mode" in IE10 Metro
+
+IE10 does not support plugins, such as Flash, in Metro mode. If
+your site requires plugins, you can let users know that via the
+`x-ua-compatible` meta element, which will prompt them to switch
+to Desktop Mode.
+
+```html
+<meta http-equiv="x-ua-compatible" content="requiresActiveX=true">
+```
+
+Here's what it looks like alongside H5BP's default `x-ua-compatible`
+values:
+
+```html
+<meta http-equiv="x-ua-compatible" content="ie=edge,requiresActiveX=true">
+```
+
+You can find more information in [Microsoft's IEBlog post about prompting for
+plugin use in IE10 Metro
+Mode](https://blogs.msdn.microsoft.com/ie/2012/01/31/web-sites-and-a-plug-in-free-web/).
 
 ### IE Pinned Sites (IE9+)
 
@@ -407,7 +431,7 @@ scratch](http://www.rssboard.org/rss-specification)?
 
 Atom is similar to RSS, and you might prefer to use it instead of or in
 addition to it. [See what Atom's all
-about](https://en.wikipedia.org/wiki/Atom_(Web_standard)).
+about](http://www.atomenabled.org/developers/syndication/).
 
 ```html
 <link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml">
