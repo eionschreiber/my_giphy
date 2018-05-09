@@ -12,7 +12,7 @@ function getData(){
     
     for (i in jiffs)
     {
-        $('.page-wrap').append("<img src='" + jiffs[i].images.original.url + "'/>")
+        $('.grid-container').append("<div class='grid-item " + i +"'><img src='" + jiffs[i].images.original.url + "'/></div>")
     }
     });
 

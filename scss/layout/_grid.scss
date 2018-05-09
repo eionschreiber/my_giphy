@@ -1,0 +1,114 @@
+.grid-container{
+    display: grid;
+    height: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    justify-items: stretch;
+    align-items: stretch;
+    .grid-item{
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    }
+    .grid-item{
+        border: solid 2px aqua;
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+    .grid-item:nth-child(6n+1){
+        border: solid 2px orange;
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+}
+
+*{
+    box-sizing: border-box;
+}
+.page-wrap{
+    color: #aaa;
+    font-size: 1.2em;
+    background-color: #666;
+    font-family: 'Poiret One', cursive;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+h2{
+    font-size: 2em;
+    color:white;
+    margin-bottom: 2em;
+    span{
+        color: #aaa;
+    }
+    @media (min-width: 1500px){
+        margin-bottom: 5em;
+    }
+}
+.sidebar{
+    background: #ccc;
+    flex: 1 1 10%;
+    min-width: 140px;
+    padding: 3em;
+}
+
+.main-content{
+    padding: 10%;
+    flex: 1 1 90%;
+    min-height: 100vh;
+}
+
+// .grid-cont{
+
+//     display: grid;
+//     height: 100%;
+//     grid-template-rows: repeat(6, 1fr);
+//     grid-template-columns: repeat(5, 1fr);
+//     grid-gap: 1em;
+
+//     .grid-item{
+//         background-color: aquamarine;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         &.small{
+//             grid-row: span 1;
+//             grid-column: span 1;
+//         }
+//         &.medium{
+//             grid-row: span 2;
+//             grid-column: span 2;
+//         }
+//         &.large{
+//             grid-row: span 3;
+//             grid-column: span 3;
+//         }
+//         &.tall{
+//             grid-row: span 3;
+//             grid-column: span 2;
+//         }
+//         &.wide{
+//             grid-row: span 2;
+//             grid-column: span 3;
+//         }
+        
+//     }
+// }
+// .two{
+//     background-image: url('https://source.unsplash.com/random/600x400');
+//     background-size: cover;
+//     background-position: top left;
+//     background-color: black;
+//     background-blend-mode: multiply;
+//     color: white;
+//     font-size: 2em;
+//     background-repeat: no-repeat;
+//     transition: all ease-in-out .2s;
+//     &:hover{
+//         background-blend-mode: normal;
+//         transform: scale(1.04);
+
+//     }
+// }
