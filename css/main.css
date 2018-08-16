@@ -1,3 +1,9 @@
+body {
+  background: #fff; }
+
+header {
+  background: linear-gradient(#6713d2, #cc208e); }
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -413,9 +419,7 @@ template {
   box-sizing: border-box; }
 
 .page-wrap {
-  color: #aaa;
   font-size: 1.2em;
-  background-color: #666;
   font-family: 'Poiret One', cursive;
   display: flex;
   flex-wrap: wrap; }
@@ -440,6 +444,22 @@ h2 {
   padding: 10%;
   flex: 1 1 90%;
   min-height: 100vh; }
+
+header {
+  width: 100%;
+  padding-top: 1.5em;
+  padding-bottom: 3em; }
+  header nav {
+    width: 100%;
+    display: flex;
+    align-items: center; }
+    header nav h1 {
+      display: inline; }
+    header nav .search {
+      display: inline; }
+      header nav .search input {
+        border-style: none;
+        border-radius: .2em; }
 
 .flex-container {
   width: 100%;

@@ -1,0 +1,14 @@
+$site-background-color: #fff;
+$primary-color: #6713d2;
+$secondary-color: #cc208e;
+
+
+$header-nav-color: linear-gradient( $primary-color, $secondary-color);
+
+
+body{
+    background: $site-background-color;
+}
+header{
+    background: $header-nav-color;
+}
