@@ -1,8 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
 body {
   background: #fff; }
-
-header {
-  background: linear-gradient(#6713d2, #cc208e); }
+  body header {
+    background: linear-gradient(#6713d2, #cc208e);
+    color: #fff; }
+  body main {
+    color: #180c27; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -395,69 +398,43 @@ template {
 [hidden] {
   display: none; }
 
-.grid-container {
-  display: grid;
-  height: 100%;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1em;
-  justify-items: stretch;
-  align-items: stretch; }
-  .grid-container .grid-item img {
-    width: 100%;
-    height: 100%; }
-  .grid-container .grid-item {
-    border: solid 2px aqua;
-    grid-row: span 1;
-    grid-column: span 1; }
-  .grid-container .grid-item:nth-child(6n+1) {
-    border: solid 2px orange;
-    grid-row: span 2;
-    grid-column: span 2; }
-
-* {
-  box-sizing: border-box; }
-
-.page-wrap {
-  font-size: 1.2em;
-  font-family: 'Poiret One', cursive;
-  display: flex;
-  flex-wrap: wrap; }
+body {
+  font-family: "PT Sans", sans-serif; }
 
 h2 {
-  font-size: 2em;
-  color: white;
+  font-weight: 700;
+  font-size: 1.3em;
   margin-bottom: 2em; }
-  h2 span {
-    color: #aaa; }
   @media (min-width: 1500px) {
     h2 {
       margin-bottom: 5em; } }
 
-.sidebar {
-  background: #ccc;
-  flex: 1 1 10%;
-  min-width: 140px;
-  padding: 3em; }
-
-.main-content {
-  padding: 10%;
-  flex: 1 1 90%;
-  min-height: 100vh; }
+button {
+  background-color: transparent;
+  padding-top: 5px;
+  border-radius: .4em; }
+  button #search-icon {
+    width: 30px; }
 
 header {
   width: 100%;
-  padding-top: 1.5em;
-  padding-bottom: 3em; }
+  padding: 1.3em 0em;
+  margin-bottom: 5em; }
   header nav {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     display: flex;
-    align-items: center; }
-    header nav h1 {
-      display: inline; }
+    align-items: center;
+    justify-content: space-between; }
+    header nav img {
+      width: 130px; }
     header nav .search {
-      display: inline; }
+      display: flex;
+      width: 40%; }
       header nav .search input {
+        height: 46px;
+        width: 100%;
+        opacity: .7;
         border-style: none;
         border-radius: .2em; }
 
@@ -471,8 +448,14 @@ header {
       max-width: 100%; }
 
 .main-content {
-  padding: 0;
-  padding-left: 1em;
-  padding-right: 1em; }
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row; }
+  .main-content h2 {
+    width: 100%; }
+  .main-content img {
+    width: 200px;
+    height: 200px; }
 
 /*# sourceMappingURL=main.css.map */

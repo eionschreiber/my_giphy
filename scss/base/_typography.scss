@@ -1,0 +1,21 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+
+$font-stack: 'PT Sans', sans-serif;
+$bold-weight-font: 700;
+$normal-weight-font: 400;
+
+body{
+    font-family: $font-stack;
+}
+
+
+
+h2{
+    font-weight: $bold-weight-font;
+    font-size: 1.3em;
+    margin-bottom: 2em;
+    @media (min-width: 1500px){
+        margin-bottom: 5em;
+    }
+}
